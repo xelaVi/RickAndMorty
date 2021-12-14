@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bfd-lQ-2Ss">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Episodes Table View Controller-->
+        <scene sceneID="Hjy-rm-smx">
+            <objects>
+                <tableViewController storyboardIdentifier="EpisodesTableViewController" id="IJd-Fh-1MJ" customClass="EpisodesTableViewController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="U19-2F-xxG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EpisodeCell" rowHeight="60" id="QyV-g8-CNk" customClass="EpisodeTableViewCell" customModule="RickAndMorty" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QyV-g8-CNk" id="gbe-04-Fnj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfi-7T-od6">
+                                            <rect key="frame" x="319" y="19" width="24" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="R9w-GP-A01"/>
+                                                <constraint firstAttribute="height" constant="22" id="WAy-w8-KZt"/>
+                                            </constraints>
+                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="favouriteImage"/>
+                                            <connections>
+                                                <action selector="favoriteButton:" destination="QyV-g8-CNk" eventType="touchUpInside" id="Gum-wB-48X"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iux-yN-c0x">
+                                            <rect key="frame" x="375" y="24" width="7" height="12"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="7" id="AeC-6a-3iL"/>
+                                                <constraint firstAttribute="height" constant="12" id="xxx-5U-OEq"/>
+                                            </constraints>
+                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="infoImage"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EpisodeName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuL-eu-DUp">
+                                            <rect key="frame" x="16" y="9" width="291" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="episode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0r-RZ-LCP">
+                                            <rect key="frame" x="16" y="30.5" width="291" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="xuL-eu-DUp" firstAttribute="height" secondItem="gbe-04-Fnj" secondAttribute="height" multiplier="0.341667" id="2Aa-34-iuL"/>
+                                        <constraint firstItem="x0r-RZ-LCP" firstAttribute="leading" secondItem="gbe-04-Fnj" secondAttribute="leading" constant="16" id="62G-AA-raZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="xfi-7T-od6" secondAttribute="trailing" constant="71" id="7qk-Fe-i70"/>
+                                        <constraint firstItem="Iux-yN-c0x" firstAttribute="centerY" secondItem="gbe-04-Fnj" secondAttribute="centerY" id="M8j-Zo-VlH"/>
+                                        <constraint firstItem="x0r-RZ-LCP" firstAttribute="width" relation="greaterThanOrEqual" secondItem="gbe-04-Fnj" secondAttribute="width" multiplier="0.146135" id="W0F-PO-z8K"/>
+                                        <constraint firstItem="xuL-eu-DUp" firstAttribute="top" secondItem="gbe-04-Fnj" secondAttribute="top" constant="9" id="XwH-4d-UwC"/>
+                                        <constraint firstItem="xfi-7T-od6" firstAttribute="leading" secondItem="x0r-RZ-LCP" secondAttribute="trailing" constant="12" id="dLj-Vd-kyM"/>
+                                        <constraint firstItem="xfi-7T-od6" firstAttribute="centerY" secondItem="gbe-04-Fnj" secondAttribute="centerY" id="niu-1Z-FRa"/>
+                                        <constraint firstItem="x0r-RZ-LCP" firstAttribute="height" secondItem="gbe-04-Fnj" secondAttribute="height" multiplier="0.341667" id="sLK-tf-ajX"/>
+                                        <constraint firstItem="xfi-7T-od6" firstAttribute="leading" secondItem="xuL-eu-DUp" secondAttribute="trailing" constant="12" id="t0k-5p-uAa"/>
+                                        <constraint firstAttribute="trailing" secondItem="Iux-yN-c0x" secondAttribute="trailing" constant="32" id="taJ-9e-SmZ"/>
+                                        <constraint firstItem="xuL-eu-DUp" firstAttribute="leading" secondItem="gbe-04-Fnj" secondAttribute="leading" constant="16" id="uA6-rx-XkC"/>
+                                        <constraint firstItem="x0r-RZ-LCP" firstAttribute="top" secondItem="gbe-04-Fnj" secondAttribute="top" constant="30.5" id="upX-eS-YNR"/>
+                                        <constraint firstItem="xuL-eu-DUp" firstAttribute="width" relation="greaterThanOrEqual" secondItem="gbe-04-Fnj" secondAttribute="width" multiplier="0.256039" id="zPL-fK-tzl"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="episodesNumber" destination="x0r-RZ-LCP" id="N80-4e-gY9"/>
+                                    <outlet property="episodesTitle" destination="xuL-eu-DUp" id="zyK-OK-UJ5"/>
+                                    <outlet property="favoriteButton" destination="xfi-7T-od6" id="0Xf-gC-Du4"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="IJd-Fh-1MJ" id="xMY-wf-5sU"/>
+                            <outlet property="delegate" destination="IJd-Fh-1MJ" id="wTA-fc-iXq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Oi5-PO-txq"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GqI-GL-BeH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7905.7971014492759" y="768.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lpK-Ik-w8c">
+            <objects>
+                <navigationController storyboardIdentifier="EpisodesNavigation" automaticallyAdjustsScrollViewInsets="NO" id="bfd-lQ-2Ss" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nax-kc-hrP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IJd-Fh-1MJ" kind="relationship" relationship="rootViewController" id="Qu2-3m-wJH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zsY-Uq-97d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6995.652173913044" y="768.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="favouriteImage" width="24" height="23"/>
+        <image name="infoImage" width="8" height="12"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

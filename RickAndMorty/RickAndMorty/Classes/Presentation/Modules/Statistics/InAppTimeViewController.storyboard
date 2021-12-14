@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--In App Time View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="InAppTimeViewController" customModule="RickAndMorty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wdk-7d-Vvn">
+                                <rect key="frame" x="152" y="120.5" width="110" height="345"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWZ-Pa-wBI">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="115" id="V4Y-jp-eOr"/>
+                                            <constraint firstAttribute="width" constant="110" id="W5s-5T-Kpa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                        <color key="textColor" name="mainColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLE-Cf-wTh">
+                                        <rect key="frame" x="0.0" y="115" width="110" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="3MJ-pD-yNG"/>
+                                            <constraint firstAttribute="height" constant="115" id="gLj-8R-UI9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="90"/>
+                                        <color key="textColor" name="mainColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltZ-lR-d8W">
+                                        <rect key="frame" x="0.0" y="230" width="110" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="115" id="5bo-vr-3Ho"/>
+                                            <constraint firstAttribute="width" constant="110" id="pLi-6m-M3b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="90"/>
+                                        <color key="textColor" name="mainColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="345" id="yWy-i4-Alh"/>
+                                    <constraint firstAttribute="width" constant="110" id="zdj-Oc-SGL"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPh-Bp-Gs4">
+                                <rect key="frame" x="51.5" y="490.5" width="311" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="311" id="gPA-iv-oNw"/>
+                                    <constraint firstAttribute="height" constant="22" id="zme-oa-GrY"/>
+                                </constraints>
+                                <color key="tintColor" name="mainColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset Time">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetTimeTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6Zn-CB-bg3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rPh-Bp-Gs4" firstAttribute="top" secondItem="wdk-7d-Vvn" secondAttribute="bottom" constant="25" id="3PQ-ge-V7e"/>
+                            <constraint firstItem="wdk-7d-Vvn" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-155" id="9TX-3t-3gh"/>
+                            <constraint firstItem="wdk-7d-Vvn" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="CNB-GB-jhU"/>
+                            <constraint firstItem="rPh-Bp-Gs4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="FI6-se-hzH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hoursLabel" destination="NWZ-Pa-wBI" id="2lP-Ly-2ID"/>
+                        <outlet property="minutesLabel" destination="wLE-Cf-wTh" id="fPu-nL-FbP"/>
+                        <outlet property="secondsLabel" destination="ltZ-lR-d8W" id="Ryh-Iz-CZz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="mainColor">
+            <color red="0.0" green="0.69999998807907104" blue="0.8399999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
